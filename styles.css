@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+html {
+  font-family: "Ubuntu", sans-serif;
+  background-color: hsl(215, 100%, 97%);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  margin: 50px 50px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  width: 700px;
+  height: 480px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+section {
+  height: 100%;
+}
+
+section .sidebar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  /* width: 100%; */
+  height: 100%;
+  flex-grow: 1;
+  border-radius: 10px;
+  background: url(assets/images/bg-sidebar-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .sidebar .circles {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  flex-basis: 30%;
+  gap: 20px;
+} */
+.sidebar .sub-steps {
+  padding: 5px;
+  min-width: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.sidebar .sub-steps .sub-step {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2px;
+  user-select: none;
+}
+
+.sidebar .sub-steps .sub-step p {
+  text-transform: uppercase;
+  color: hsl(231, 11%, 63%);
+  font-size: 0.6rem;
+  font-weight: 400;
+}
+
+.sidebar .sub-steps .sub-step h3 {
+  text-transform: uppercase;
+  color: aliceblue;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.sidebar .sub-steps .circle {
+  border: 1px solid hsl(229, 24%, 87%);
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.circle:hover {
+  border: 1px solid hsl(231, 11%, 63%);
+  background-color: hsl(215, 100%, 97%);
+  cursor: pointer;
+}
+.circle:hover p {
+  color: hsl(213, 96%, 18%);
+}
+
+.circle p {
+  color: hsl(229, 24%, 87%);
+  text-align: center;
+  user-select: none;
+}
+
+section .steps {
+  /* border: 1px solid #333; */
+  flex-grow: 1;
+  flex-basis: 70%;
+  /* margin: 20px; */
+  padding: 20px 40px 0px 40px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.steps h1 {
+  color: hsl(213, 96%, 18%);
+  font-size: 1.5rem;
+}
+
+.steps p {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  height: 150px;
+  width: 100%;
+}
+
+.card {
+  flex-grow: 1;
+  flex-basis: 0;
+  width: 100px;
+  border: 1px solid hsl(229, 24%, 87%);
+  padding: 10px;
+  height: 100%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.cards i {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: bisque;
+  padding: 10px;
+}
+
+.options {
+  width: 100%;
+  border-radius: 10px;
+  background-color: hsl(230, 75%, 98%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 12px;
+}
+
+.darkblue {
+  font-weight: 700;
+  color: hsl(213, 96%, 18%);
+}
+
+.options h3 {
+  font-weight: 700;
+  color: hsl(231, 11%, 63%);
+}
+
+.options .rectangle {
+  width: 40px;
+  height: 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: hsl(213, 96%, 18%);
+  position: relative;
+}
+
+.little-circle {
+  position: absolute;
+  margin: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: hsl(230, 75%, 98%);
+}
+
+.next-previous {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.next-previous button {
+  padding: 10px;
+  border: none;
+}
+.next-previous button:nth-child(2),
+.next-previous button:first-child {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.next-previous button:first-child {
+  color: hsl(231, 11%, 63%);
+  background-color: hsl(0, 0%, 100%);
+}
+.next-previous button:nth-child(2) {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(213, 96%, 18%);
+}
+
+@media (max-width: 375px) {
+  main {
+    z-index: 1;
+    flex-direction: column-reverse;
+    height: 70%;
+    justify-content: flex-start;
+  }
+
+  section .sidebar {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1px;
+    padding: 1px;
+
+    flex-grow: 1;
+    border-radius: 0px;
+    background: url(assets/images/bg-sidebar-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .sidebar .sub-steps {
+    padding: 1px;
+    min-width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .sidebar .sub-steps .sub-step {
+    display: none;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+    user-select: none;
+  }
+
+  .sidebar .sub-steps .circle {
+    border: 1px solid hsl(229, 24%, 87%);
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+
+  .circle p {
+    font-size: 0.4rem;
+  }
+
+  section .steps {
+    /* margin: 50px 50px; */
+    padding: 20px;
+    height: 80%;
+    width: 80%;
+  }
+
+  .card {
+    width: 50px;
+    height: 100px;
+  }
+  .options {
+    margin-top: 20px;
+  }
+
+  .next-previous {
+    position: absolute;
+    bottom: 0;
+    background-color: hsl(0, 0%, 100%);
+    left: 0;
+    padding: 15px;
+  }
+}
